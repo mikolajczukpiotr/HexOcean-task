@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom"; // Use HashRouter instead of BrowserRouter
 import { StateMachineProvider, createStore } from "little-state-machine";
 import ChooseDish from "./pages/ChooseDish";
 import Pizza from "./pages/Pizza";
