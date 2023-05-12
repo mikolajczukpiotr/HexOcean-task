@@ -50,7 +50,6 @@ const ChooseDish = (props: Props) => {
                 value: true,
                 message: "Preparation time is a required field",
               },
-              maxLength: 80,
             })}
             defaultValue={state.data?.preparation_time}
           />
