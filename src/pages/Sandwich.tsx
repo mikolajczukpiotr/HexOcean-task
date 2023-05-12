@@ -35,6 +35,14 @@ const Sandwich = (props: Props) => {
                 value: true,
                 message: "Slices of bread is a required field",
               },
+              min: {
+                value: 0,
+                message: "Value is incorrect",
+              },
+              max: {
+                value: 999,
+                message: "Value is incorrect",
+              },
             })}
           />
           <p className="error-message">{errors.slices_of_bread?.message}</p>

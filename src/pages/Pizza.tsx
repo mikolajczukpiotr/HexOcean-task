@@ -35,6 +35,14 @@ const Pizza = (props: Props) => {
                 value: true,
                 message: "Number of slices is a required field",
               },
+              min: {
+                value: 0,
+                message: "Value is incorrect",
+              },
+              max: {
+                value: 999,
+                message: "Value is incorrect",
+              },
             })}
             defaultValue={state.data?.no_of_slices}
           />
@@ -49,6 +57,14 @@ const Pizza = (props: Props) => {
               required: {
                 value: true,
                 message: "Diameter is a required field",
+              },
+              min: {
+                value: 0,
+                message: "Value is incorrect",
+              },
+              max: {
+                value: 999,
+                message: "Value is incorrect",
               },
             })}
             defaultValue={state.data?.diameter}

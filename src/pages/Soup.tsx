@@ -34,7 +34,14 @@ const Soup = (props: Props) => {
                   value: true,
                   message: "Dish name is a required field",
                 },
-                maxLength: 80,
+                min: {
+                  value: 0,
+                  message: "Value is incorrect",
+                },
+                max: {
+                  value: 10,
+                  message: "Value is incorrect",
+                },
               })}
               value={spiciness}
               onChange={(e) => setSpiciness(parseInt(e.target.value, 10))}
