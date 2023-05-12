@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/HexOcean-task/static/css/main.07240458.css",
-    "main.js": "/HexOcean-task/static/js/main.8c575555.js",
+    "main.js": "/HexOcean-task/static/js/main.8b20f708.js",
     "index.html": "/HexOcean-task/index.html",
     "main.07240458.css.map": "/HexOcean-task/static/css/main.07240458.css.map",
-    "main.8c575555.js.map": "/HexOcean-task/static/js/main.8c575555.js.map"
+    "main.8b20f708.js.map": "/HexOcean-task/static/js/main.8b20f708.js.map"
   },
   "entrypoints": [
     "static/css/main.07240458.css",
-    "static/js/main.8c575555.js"
+    "static/js/main.8b20f708.js"
   ]
 }
