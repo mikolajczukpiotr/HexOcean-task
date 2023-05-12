@@ -4,7 +4,7 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../stateMachine/updateAction";
 import { withRouter } from "react-router-dom";
 
-import "../App.css";
+import "../index.css";
 import { DishData, Props } from "../types";
 
 const ChooseDish = (props: Props) => {
@@ -23,7 +23,7 @@ const ChooseDish = (props: Props) => {
   };
   return (
     <div className="main">
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
           <label>Dish name</label>
           <input

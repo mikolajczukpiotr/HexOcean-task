@@ -7,7 +7,7 @@ import Pizza from "./pages/Pizza";
 import Soup from "./pages/Soup";
 import Sandwich from "./pages/Sandwich";
 
-import "./App.css";
+import "./index.css";
 import Result from "./pages/Result";
 
 createStore({
