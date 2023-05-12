@@ -51,7 +51,7 @@ const ChooseDish = (props: Props) => {
                 message: "Preparation time is a required field",
               },
             })}
-            defaultValue={state.data?.preparation_time}
+            defaultValue={state.data?.preparation_time ?? "00:00:00"}
           />
           <p className="error-message">{errors.preparation_time?.message}</p>
           <label>Dish type</label>
