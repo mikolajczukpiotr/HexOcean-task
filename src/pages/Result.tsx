@@ -4,12 +4,13 @@ import { withRouter } from "react-router-dom";
 import { Props } from "../types";
 import ErrorAlert from "../ErrorAlert";
 import clearAction from "../stateMachine/clearAction";
+import Stepper from "../Stepper";
 
 const prepareBody = (state: GlobalState) =>
   JSON.stringify({
-    name: state.data?.name,
-    preparation_time: state.data.preparation_time,
-    type: state.data.type,
+    // name: state.data?.name,
+    // preparation_time: state.data.preparation_time,
+    // type: state.data.type,
     diameter: state.data.type === "pizza" ? state.data.diameter : null,
     no_of_slices: state.data.type === "pizza" ? state.data.no_of_slices : null,
     slices_of_bread:
@@ -61,11 +62,15 @@ const Result = (props: Props) => {
   const onBack = () => {
     props.history.goBack();
   };
+  const onStart = () => {
+    props.history.push("./");
+  };
   return (
     <div className="main">
       <div className="form">
+        <Stepper currentStep={2} />
         <h1>SUMMARY</h1>
-        {!done ? (
+        {!done && state.data.name ? (
           <div>
             <div>
               <p>Dish name: {state.data.name} </p>
@@ -90,11 +95,19 @@ const Result = (props: Props) => {
               <button onClick={onBack} className="back-button">
                 Back
               </button>
-              <input type="submit" onClick={onSubmit} value="SENT" />
+              <input
+                type="submit"
+                onClick={onSubmit}
+                value="SENT"
+                disabled={error ? true : false}
+              />
             </div>
           </div>
         ) : (
-          <h2 className="sent">SUCCES SENT</h2>
+          <div>
+            <h2 className="sent">SUCCES SENT</h2>
+            <input type="submit" onClick={onStart} value="GO START" />
+          </div>
         )}
       </div>
     </div>

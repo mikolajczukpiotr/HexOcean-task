@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 
 import "../index.css";
 import { DishData, Props } from "../types";
+import Stepper from "../Stepper";
 
 const ChooseDish = (props: Props) => {
   const {
@@ -25,6 +26,7 @@ const ChooseDish = (props: Props) => {
     <div className="main">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
+          <Stepper currentStep={0} />
           <label>Dish name</label>
           <input
             type="text"
@@ -51,7 +53,7 @@ const ChooseDish = (props: Props) => {
                 message: "Preparation time is a required field",
               },
             })}
-            defaultValue={state.data?.preparation_time ?? "00:00:00"}
+            defaultValue={state.data?.preparation_time}
           />
           <p className="error-message">{errors.preparation_time?.message}</p>
           <label>Dish type</label>

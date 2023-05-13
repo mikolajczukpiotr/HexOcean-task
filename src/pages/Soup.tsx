@@ -4,6 +4,7 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../stateMachine/updateAction";
 import { withRouter } from "react-router-dom";
 import { DishData, Props } from "../types";
+import Stepper from "../Stepper";
 
 const Soup = (props: Props) => {
   const { register, handleSubmit } = useForm<DishData>();
@@ -20,6 +21,7 @@ const Soup = (props: Props) => {
     <div className="main">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
+          <Stepper currentStep={1} />
           <h1>Soup 🍜</h1>
           <label>Spiciness scale:</label>
           <div className="scale">

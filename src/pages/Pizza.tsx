@@ -4,6 +4,7 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../stateMachine/updateAction";
 import { withRouter } from "react-router-dom";
 import { DishData, Props } from "../types";
+import Stepper from "../Stepper";
 
 const Pizza = (props: Props) => {
   const {
@@ -24,6 +25,7 @@ const Pizza = (props: Props) => {
     <div className="main">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
+          <Stepper currentStep={1} />
           <h2>Pizza 🍕</h2>
           <label>Number of slices:</label>
           <input
