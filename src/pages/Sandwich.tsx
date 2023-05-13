@@ -25,6 +25,7 @@ const Sandwich = (props: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
           <Stepper currentStep={1} />
+          <div className="separator"></div>
           <h2>Sandwich 🥪</h2>
           <label>Slices of bread:</label>
           <input

@@ -8,9 +8,9 @@ import Stepper from "../Stepper";
 
 const prepareBody = (state: GlobalState) =>
   JSON.stringify({
-    // name: state.data?.name,
-    // preparation_time: state.data.preparation_time,
-    // type: state.data.type,
+    name: state.data?.name,
+    preparation_time: state.data.preparation_time,
+    type: state.data.type,
     diameter: state.data.type === "pizza" ? state.data.diameter : null,
     no_of_slices: state.data.type === "pizza" ? state.data.no_of_slices : null,
     slices_of_bread:
@@ -69,6 +69,7 @@ const Result = (props: Props) => {
     <div className="main">
       <div className="form">
         <Stepper currentStep={2} />
+        <div className="separator"></div>
         <h1>SUMMARY</h1>
         {!done && state.data.name ? (
           <div>

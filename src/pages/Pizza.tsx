@@ -26,6 +26,7 @@ const Pizza = (props: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
           <Stepper currentStep={1} />
+          <div className="separator"></div>
           <h2>Pizza 🍕</h2>
           <label>Number of slices:</label>
           <input

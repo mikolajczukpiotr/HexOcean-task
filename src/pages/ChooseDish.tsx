@@ -27,6 +27,7 @@ const ChooseDish = (props: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
           <Stepper currentStep={0} />
+          <div className="separator"></div>
           <label>Dish name</label>
           <input
             type="text"

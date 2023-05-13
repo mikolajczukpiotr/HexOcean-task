@@ -22,6 +22,7 @@ const Soup = (props: Props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form">
           <Stepper currentStep={1} />
+          <div className="separator"></div>
           <h1>Soup 🍜</h1>
           <label>Spiciness scale:</label>
           <div className="scale">
