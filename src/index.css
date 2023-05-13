@@ -185,8 +185,8 @@ input[type="submit"]:hover:disabled {
   padding: 0;
   position: relative;
   display: inline-block;
-  width: 2vw;
-  height: 1.7vh;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 50%;
