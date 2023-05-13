@@ -3,10 +3,10 @@ import "./index.css";
 
 const steps = [
   {
-    title: "Select dishes",
+    title: "Dish",
   },
   {
-    title: "Selection of add-ons",
+    title: "Addons",
   },
   {
     title: "Summary",
@@ -34,6 +34,7 @@ const Stepper = ({ currentStep }: { currentStep: number }) => {
           {step.title}
         </div>
       ))}
+      <hr />
     </div>
   );
 };

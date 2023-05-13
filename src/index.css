@@ -18,7 +18,7 @@ body {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 440px;
+  width: 340px;
   min-height:00px;
 }
 .footer {
@@ -178,11 +178,10 @@ input[type="submit"]:hover:disabled {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
-  margin-top:18px
+  margin-top:18px;
 }
 
 .stepper-progress-step {
-  margin: 0;
   padding: 0;
   position: relative;
   display: inline-block;
