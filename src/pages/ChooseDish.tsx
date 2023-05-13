@@ -45,13 +45,17 @@ const ChooseDish = (props: Props) => {
           <p className="error-message">{errors.name?.message}</p>
           <label>Preparation time</label>
           <input
-            type="time"
-            step="2"
+            type="text"
             id="preparation_time"
+            placeholder="HH:MM:SS"
             {...register("preparation_time", {
               required: {
                 value: true,
                 message: "Preparation time is a required field",
+              },
+              pattern: {
+                value: /^([0-1]?[0-9]|2[0-3]):([0-5]?[0-9]):([0-5]?[0-9])$/,
+                message: "Preparation time must be in HH:MM:SS format",
               },
             })}
             defaultValue={state.data?.preparation_time}
