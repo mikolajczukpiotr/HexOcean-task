@@ -3,11 +3,9 @@ import { useForm } from "react-hook-form";
 import { useStateMachine } from "little-state-machine";
 import updateAction from "../stateMachine/updateAction";
 import { withRouter } from "react-router-dom";
-
-import "../index.css";
 import { DishData, Props } from "../types";
 import Stepper from "../components/Stepper";
-import InputMask from "../utils/TimeInput";
+import "../index.css";
 
 const ChooseDish = (props: Props) => {
   const {
