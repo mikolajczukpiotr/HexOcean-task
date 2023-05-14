@@ -42,11 +42,11 @@ const ChooseDish = (props: Props) => {
             },
             minLength: {
               value: 3,
-              message: "Value is incorrect",
+              message: "Minimum name length is 3",
             },
             maxLength: {
               value: 99,
-              message: "Value is incorrect",
+              message: "Maximum name length is 99",
             },
           })}
           defaultValue={state.data?.name}
