@@ -1,6 +1,6 @@
 # HexOcean-task
 
-This is a simple React application that allows users to create a form for adding new dishes with various fields based on dish type and submit them to an API. Additionally, the project has added data-testid attributes to the form elements to facilitate testing. It is prepared for connecting tests to ensure the reliability and correctness of the application.
+This is a simple React application that allows users to create a form for adding new dishes with various fields based on dish type and submit them to an API.
 
 ## Installation
 
