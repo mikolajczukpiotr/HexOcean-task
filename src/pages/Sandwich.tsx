@@ -4,7 +4,7 @@ import { useStateMachine } from "little-state-machine";
 import updateAction from "../stateMachine/updateAction";
 import { withRouter } from "react-router-dom";
 import { DishData, Props } from "../types";
-import Stepper from "../Stepper";
+import Stepper from "../components/Stepper";
 
 const Sandwich = (props: Props) => {
   const {
@@ -21,43 +21,52 @@ const Sandwich = (props: Props) => {
     props.history.goBack();
   };
   return (
-    <div className="main">
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form">
-          <Stepper currentStep={1} />
-          <div className="separator"></div>
-          <h2>Sandwich 🥪</h2>
-          <label>Slices of bread:</label>
+    <form onSubmit={handleSubmit(onSubmit)} data-testid="sandwich-form">
+      <div className="form">
+        <Stepper currentStep={1} />
+        <div className="separator"></div>
+        <h2>Sandwich 🥪</h2>
+        <label>Slices of bread:</label>
+        <input
+          type="number"
+          id="slices_of_bread"
+          data-testid="slices-of-bread-input"
+          placeholder="4"
+          defaultValue={state.data?.slices_of_bread}
+          {...register("slices_of_bread", {
+            required: {
+              value: true,
+              message: "Slices of bread is a required field",
+            },
+            min: {
+              value: 0,
+              message: "Value is incorrect",
+            },
+            max: {
+              value: 999,
+              message: "Value is incorrect",
+            },
+          })}
+        />
+        <p className="error-message" data-testid="sandwich-error">
+          {errors.slices_of_bread?.message}
+        </p>
+        <div className="footer">
+          <button
+            onClick={onBack}
+            className="back-button"
+            data-testid="sandwich-back-button"
+          >
+            Back
+          </button>
           <input
-            type="number"
-            id="slices_of_bread"
-            placeholder="4"
-            defaultValue={state.data?.slices_of_bread}
-            {...register("slices_of_bread", {
-              required: {
-                value: true,
-                message: "Slices of bread is a required field",
-              },
-              min: {
-                value: 0,
-                message: "Value is incorrect",
-              },
-              max: {
-                value: 999,
-                message: "Value is incorrect",
-              },
-            })}
+            type="submit"
+            value="Next"
+            data-testid="sandwich-next-button"
           />
-          <p className="error-message">{errors.slices_of_bread?.message}</p>
-          <div className="footer">
-            <button onClick={onBack} className="back-button">
-              Back
-            </button>
-            <input type="submit" value="Next" />
-          </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 };
 

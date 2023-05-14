@@ -1,8 +1,8 @@
 import React from "react";
 
-const ErrorAlert = ({ description }: { description: string }) => {
+const ErrorAlert = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="alert-error">
+    <div className="alert-error" data-testid="error-alert">
       <div className="error-icon">
         <svg
           className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit css-1cw4hi4"
@@ -17,10 +17,7 @@ const ErrorAlert = ({ description }: { description: string }) => {
       </div>
       <div>
         <div className="alert-title">Ooops there have been error!</div>
-        <div
-          className="alert-description"
-          dangerouslySetInnerHTML={{ __html: description }}
-        />
+        <div className="alert-description">{children}</div>
       </div>
     </div>
   );

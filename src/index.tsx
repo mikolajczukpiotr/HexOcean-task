@@ -22,13 +22,15 @@ function App() {
   return (
     <StateMachineProvider>
       <h1>Frontend (React) Developer - Dishes</h1>
-      <Router>
-        <Route exact path="/" component={ChooseDish} />
-        <Route path="/pizza" component={Pizza} />
-        <Route path="/soup" component={Soup} />
-        <Route path="/sandwich" component={Sandwich} />
-        <Route path="/result" component={Result} />
-      </Router>
+      <div className="main">
+        <Router>
+          <Route exact path="/" component={ChooseDish} />
+          <Route path="/pizza" component={Pizza} />
+          <Route path="/soup" component={Soup} />
+          <Route path="/sandwich" component={Sandwich} />
+          <Route path="/result" component={Result} />
+        </Router>
+      </div>
     </StateMachineProvider>
   );
 }

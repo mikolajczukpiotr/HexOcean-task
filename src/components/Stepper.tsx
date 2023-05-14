@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "../index.css";
 
 const steps = [
   {
@@ -15,11 +15,10 @@ const steps = [
 
 const Stepper = ({ currentStep }: { currentStep: number }) => {
   return (
-    <div className="stepper-progress">
+    <div className="stepper-progress" data-testid="stepper">
       {steps.map((step, index) => (
-        <div className="stepper-progress-main">
+        <div className="stepper-progress-main" key={index}>
           <div
-            key={index}
             className={`stepper-progress-step ${
               index <= currentStep ? "active" : ""
             }`}

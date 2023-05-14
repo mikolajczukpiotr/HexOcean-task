@@ -1,6 +1,6 @@
 # HexOcean-task
 
-This is a simple React application that allows users to create a form for adding new dishes with various fields based on dish type and submit them to an API.
+This is a simple React application that allows users to create a form for adding new dishes with various fields based on dish type and submit them to an API. Additionally, the project has added data-testid attributes to the form elements to facilitate testing. It is prepared for connecting tests to ensure the reliability and correctness of the application.
 
 ## Installation
 
@@ -9,6 +9,7 @@ To install and run the application, follow these steps:
 1. Clone the repository to your local machine
 2. Install the dependencies by running `npm install` or `yarn` in the project directory
 3. Start the development server by running `npm start` or `yarn start`
+
 
 ## Technology Stack
 
@@ -27,3 +28,6 @@ For this project, I chose React Hook Form over Redux Form for several reasons:
 - **Performance**: React Hook Form is designed for optimal performance. It uses uncontrolled components and avoids unnecessary re-renders, resulting in faster and smoother form interactions.
 
 - **Flexibility**: React Hook Form provides a flexible and extensible API for building complex forms. It allows you to easily create custom form fields and validation rules, and integrates well with other libraries and tools.
+
+## Testing
+Additionally, this project includes data-testid attributes throughout the codebase, making it easier to write and maintain tests for the application. It is ready for test integration.
